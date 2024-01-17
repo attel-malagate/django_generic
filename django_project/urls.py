@@ -22,8 +22,9 @@ urlpatterns = [
     # Django admin
     path("admin/", admin.site.urls),
     # User management
-    path("accounts/", include("django.contrib.auth.urls")),
-    path("accounts/", include("accounts.urls")),
+    # path("accounts/", include("django.contrib.auth.urls")), # comment out to try all_auth module
+    # path("accounts/", include("accounts.urls")), # comment out to try all_auth module
+    path("accounts/", include("allauth.urls")),  # Using allauth modules
     # Local apps
     path("", include("pages.urls")),
 ]
